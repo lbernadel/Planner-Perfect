@@ -28,7 +28,7 @@ Google is my best friend. It's probably yours too. It helped me find these resou
 - [Getting Hour Info](https://momentjs.com/docs/#/get-set/hour/ "Getting Hour from Moment Object")
 
 Most importantly, shout out to my tutor, Phil, for helping me understand:
-    a) how to interact with the moment.js object for the colorful highlighting feature
-    b) how to use the `data-` attribute with jQuery
-    c) using the `this` keyword in JS
-    d) communicating properly with the browser's `localStorage`
+* how to interact with the moment.js object for the colorful highlighting feature
+* how to use the `data-` attribute with jQuery
+* using the `this` keyword in JS
+* communicating properly with the browser's `localStorage`
