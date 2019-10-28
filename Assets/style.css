@@ -3,6 +3,15 @@ html, header, body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+header {
+    color: gray;    
+}
+
+hr {
+    background: gray;
+    height: 2px;
+}
+
 i.cal {
     position: relative;
     top: 4px;
