@@ -16,7 +16,7 @@ $(document).ready(function () {
             // retrieving info from local storage for each time block
             $("#" + timeBlocks[i]).val(localStorage.getItem(timeBlocks[i] + "-info"));
             
-            // coloring past time blocks (anything before clock's current hour)...needs to account for plus 1 error
+            // coloring past time blocks (anything before clock's current hour)...doesn't need to account for off by 1 error b/c moment works from 0 to 23 like array index
             if (timeHours[i] < now.hour()){
                 $("#" + timeBlocks[i]).css("background-color", "#e0e4e8");
             // coloring current time block (the block that matches the clock's current hour)
