@@ -16,6 +16,17 @@ $(document).ready(function () {
             // retrieving info from local storage for each time block
             $("#" + timeBlocks[i]).val(localStorage.getItem(timeBlocks[i] + "-info"));
             
+            // coloring past time blocks (anything before clock's current hour)...needs to account for plus 1 error
+            if (timeHours[i] < now.hour()+1){
+                $("#" + timeBlocks[i]).css("background-color", "#e0e4e8");
+            // coloring current time block (the block that matches the clock's current hour)
+            }else if (timeHours[i] === now.hour() + 1) {
+                $("#" + timeBlocks[i]).css("background-color", "#ff6666");
+            // coloring future time blocks (anything after the clock's current hour)
+            }else{
+                $("#" + timeBlocks[i]).css("background-color", "#70db70");
+            };
+            
         };
     };
 
