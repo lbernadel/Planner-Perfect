@@ -5,6 +5,25 @@ $(document).ready(function () {
         
     $("#today").text(now);
 
+    // get any existing data from local storage when browser is refreshed
+    function display() {
+        var timeBlocks = ["9am-events", "10am-events", "11am-events", "12pm-events", "1pm-events", "2pm-events", "3pm-events", "4pm-events", "5pm-events"],
+            timeHours = [9, 10, 11, 12, 13, 14, 15, 16, 17], /* requires military time according to moment() docs */
+            now = moment();
+
+        // color code text fields based on past(gray), current(red) and future(green) events
+        for (var i = 0; i < 9; i++) {
+            // retrieving info from local storage for each time block
+            $("#" + timeBlocks[i]).val(localStorage.getItem(timeBlocks[i] + "-info"));
+            
+        };
+    };
+
+    display();
+
+
+    
+
     // set up click event for buttons using .save
     $(".save").on("click", function () {
 
